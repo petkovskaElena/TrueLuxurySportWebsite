@@ -8,12 +8,46 @@ html {
   }
 
 .hero {
-
+ color: $white;
+ @include hero;
+ @media (min-width: 992px) {
+   font-size: 60px;
+ }
 }
 
 h1 {
     @include headline;
-    font-size: 60px;
+    font-size: 45px;
     text-align: center;
     text-transform: uppercase;
 }
+
+h2,
+h3,
+h4,
+h5 {
+   @include main-text; 
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 26px;
+}
+h5 {
+    font-size: 24px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    @media(min-width: 768px) {
+      font-size: 18px;
+      line-height: 1.6;
+  
+      margin: 0 0 35px;
+    }
+  }
