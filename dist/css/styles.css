@@ -8,7 +8,10 @@ html, body {
   margin: 0; }
 
 body {
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px; }
 
 html {
   width: 100%;
@@ -200,17 +203,80 @@ section {
     background: transparent !important;
     position: absolute; } }
 
-footer {
+.contact-info h1 {
+  margin-bottom: 100px; }
+
+.contact-info .fa-stack {
+  color: #D8A949;
+  margin-right: 15px; }
+
+.contact-info p {
+  margin-bottom: 0; }
+
+.footer {
   background: linear-gradient(to bottom, rgba(23, 30, 51, 0.8) 0%, rgba(23, 30, 51, 0.8) 1%, rgba(23, 30, 51, 0.8) 100%), url("../images/footer-background.jpg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 400px; }
-  footer .footer-top .quicklinks {
+  .footer h4 {
+    color: #fff;
+    text-transform: uppercase; }
+  .footer .btn-subscribe {
+    width: 240px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #D8A949;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 150px; }
+    .footer .btn-subscribe:hover {
+      background-color: rgba(219, 169, 73, 0.2);
+      color: #fff;
+      border: 2px solid #D8A949; }
+  .footer .quicklinks {
     list-style: none; }
-    footer .footer-top .quicklinks li {
+    .footer .quicklinks li {
       display: inline; }
-  footer .footer-bottom {
-    background-color: #161B29;
-    height: 100px; }
+      .footer .quicklinks li a {
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 20px;
+        font-size: 14px; }
+        .footer .quicklinks li a:hover {
+          color: #D8A949;
+          text-decoration: none; }
+
+footer {
+  background-color: #161B29;
+  height: 100px; }
+  footer .copyright {
+    color: #fff;
+    font-size: 14px;
+    margin: 0; }
+  footer .legal-links {
+    list-style: none;
+    margin-bottom: 0; }
+    footer .legal-links li {
+      display: inline; }
+      footer .legal-links li a {
+        color: #fff;
+        font-size: 14px;
+        padding: 0 10px; }
+        footer .legal-links li a:hover {
+          color: #D8A949;
+          text-decoration: none; }
+  footer .social {
+    list-style: none;
+    margin-bottom: 0; }
+    footer .social li {
+      display: inline; }
+      footer .social li .fab {
+        color: #D8A949;
+        font-size: 20px;
+        padding: 0 13px; }
+        footer .social li .fab:hover {
+          color: #fff; }

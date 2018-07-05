@@ -3,6 +3,8 @@ html, body {
    }
 body {
     background-color: $background;
+    @include main-text;
+    font-size: 18px;
 }
 
 html {

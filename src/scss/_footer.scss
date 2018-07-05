@@ -1,21 +1,88 @@
-footer {
+.contact-info {
+    h1 {
+        margin-bottom: 100px;
+    }
+    .fa-stack {
+        color: $accent;
+        margin-right: 15px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+.footer {
     background: linear-gradient(to bottom, rgba(23,30,51,0.8) 0%,rgba(23,30,51,0.8) 1%,rgba(23,30,51,0.8) 100%), url('../images/footer-background.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 400px;
-    .footer-top {
-        .quicklinks {
-            list-style: none;
-           li {
-               display: inline;
-           }
+    h4 {
+        color: $white;
+        text-transform: uppercase;
+    }
+    .btn-subscribe {
+        @include button;
+        width: 150px;
+        &:hover {
+            @include button-hover;
         }
     }
-    .footer-bottom {
+    .quicklinks {
+        list-style: none;
+       li {
+           display: inline;
+           a {
+               color: $white;
+               text-transform: uppercase;
+               padding: 0 20px;
+               font-size: 14px;
+               &:hover {
+                   color: $accent;
+                   text-decoration: none;
+               }
+           }
+       }
+    }
+
+}
+footer {
        background-color: $background-dark;
        height: 100px;
-      
-    }
+       .copyright {
+           color: $white;
+            font-size: 14px;
+            margin: 0;
+        }
+        .legal-links {
+            list-style: none;
+            margin-bottom: 0;
+            li {
+                display: inline;
+                a {
+                    color: $white;
+                    font-size: 14px;
+                    padding: 0 10px;
+                    &:hover {
+                        color: $accent;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .social {
+            list-style: none;
+            margin-bottom: 0;
+            li {
+                display: inline;
+               .fab {
+                    color: $accent;
+                    font-size: 20px;
+                    padding: 0 13px;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
 }
