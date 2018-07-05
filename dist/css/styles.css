@@ -74,17 +74,17 @@ section {
   -o-background-size: cover;
   background-size: cover; }
 
-.container-fluid {
+.header-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%; }
-  .container-fluid h3 {
+  .header-container h3 {
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
     line-height: 37px; }
-  .container-fluid .btn-main {
+  .header-container .btn-main {
     width: 240px;
     height: 60px;
     border-radius: 5px;
@@ -93,11 +93,28 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     text-transform: uppercase; }
-  .container-fluid .divider {
+    .header-container .btn-main:hover {
+      background-color: rgba(219, 169, 73, 0.2);
+      color: #fff;
+      border: 2px solid #D8A949;
+      transition: all 0.4s; }
+  .header-container .divider {
     border: 0;
     height: 1px;
     background: #D8A949;
     width: 200px; }
+
+.main-content .item {
+  position: relative;
+  overflow: hidden; }
+  .main-content .item img {
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+  .main-content .item:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
 
 .main-content #bestOfBritain {
   background: url("../images/best_of_britain.jpg") no-repeat;
@@ -110,7 +127,8 @@ section {
 
 .main-content #concierge {
   background: url("../images/concierge.jpg") no-repeat;
-  width: 360px;
+  min-width: 360px;
+  width: 100%;
   height: 360px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -119,7 +137,8 @@ section {
 
 .main-content #exclusiveAccess {
   background: url("../images/exclusive_access.jpg") no-repeat;
-  width: 360px;
+  min-width: 360px;
+  width: 100%;
   height: 360px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -128,7 +147,8 @@ section {
 
 .main-content #bestOfTheRest {
   background: url("../images/best_of_the_rest.jpg") no-repeat;
-  width: 360px;
+  min-width: 360px;
+  width: 100%;
   height: 360px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -143,18 +163,6 @@ section {
   color: #fff;
   text-transform: uppercase;
   text-align: center; }
-
-.main-content .item {
-  position: relative;
-  overflow: hidden; }
-  .main-content .item img {
-    -moz-transition: all 0.6s;
-    -webkit-transition: all 0.6s;
-    transition: all 0.6s; }
-  .main-content .item:hover img {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
 
 #mainMenu {
   font-family: 'Montserrat', sans-serif;
@@ -191,3 +199,18 @@ section {
     border: none;
     background: transparent !important;
     position: absolute; } }
+
+footer {
+  background: linear-gradient(to bottom, rgba(23, 30, 51, 0.8) 0%, rgba(23, 30, 51, 0.8) 1%, rgba(23, 30, 51, 0.8) 100%), url("../images/footer-background.jpg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px; }
+  footer .footer-top .quicklinks {
+    list-style: none; }
+    footer .footer-top .quicklinks li {
+      display: inline; }
+  footer .footer-bottom {
+    background-color: #161B29;
+    height: 100px; }
