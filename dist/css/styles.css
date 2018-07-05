@@ -69,7 +69,7 @@ section {
 
 .header {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: transparent;
   background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-background.jpg") no-repeat center center scroll;
   -webkit-background-size: cover;
