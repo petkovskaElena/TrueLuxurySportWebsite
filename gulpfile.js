@@ -26,6 +26,7 @@ var image = require('gulp-image');
       .pipe(gulp.dest('dist/images'));
   });
 
-  gulp.task('watch', ['browserSync', 'sass', 'image'], function (){
+  gulp.task('watch', ['browserSync', 'sass'], function (){
     gulp.watch('src/scss/**/*.scss', ['sass']); 
+   // gulp.watch('src/images/*', ['image']); 
   });

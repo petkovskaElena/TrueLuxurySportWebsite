@@ -1,49 +1,79 @@
-#mainMenu {
-    @include main-text;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    height: 70px;
-    margin-bottom: 0;
-    background: blue !important;
-    .navbar-nav {
-        li {
-          a {
-            color: white;
-            text-transform: uppercase;
-            padding: 24px 20px;
-            &:hover,
-            &:focus {
-              color: $accent;
-              background-color: transparent;
-            }
-          }
-        }
-        .active {
-            a {
-              color: $accent;
-              background-color: transparent;
-              font-weight: 600;
-              &:hover,
-              &:focus {
-                color: $accent;
-                background-color: transparent;
-              }
-            }
-          }
+.navbarTop {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
+  .logo {
+    margin-right: 60px;
+    width: 200px;
+    height: 110px;
+    position: relative;
+    img {
+      border: none;
     }
+    #logoImage {
+      //background: url("../images/TLS_White.png") no-repeat center center;
+      webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 200px;
+      height: 110px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+#mainMenu {
+  @include main-text;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 70px;
+  margin-bottom: 0;
+  background: blue !important;
+  .navbar-nav {
+    li {
+      a {
+        color: white;
+        text-transform: uppercase;
+        padding: 24px 20px;
+        &:hover,
+        &:focus {
+          color: $accent;
+          background-color: transparent;
+        }
+      }
+    }
+    .active {
+      a {
+        color: $accent;
+        background-color: transparent;
+        font-weight: 600;
+        &:hover,
+        &:focus {
+          color: $accent;
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 @media(min-width:992px) {
-    #mainMenu {
-      color: $white;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-      -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-      transition: padding-top 0.3s, padding-bottom 0.3s;
-      border: none;
-      background: transparent !important;
-      position: absolute;
-    }
+  #mainMenu {
+    color: $white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 150px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background: transparent !important;
+    position: absolute;
+  }
 }

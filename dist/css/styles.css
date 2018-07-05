@@ -167,6 +167,29 @@ section {
   text-transform: uppercase;
   text-align: center; }
 
+.navbarTop {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  width: 100%;
+  margin-top: 50px; }
+  .navbarTop .logo {
+    margin-right: 60px;
+    width: 200px;
+    height: 110px;
+    position: relative; }
+    .navbarTop .logo img {
+      border: none; }
+    .navbarTop .logo #logoImage {
+      webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 200px;
+      height: 110px; }
+  .navbarTop p {
+    margin-bottom: 0; }
+
 #mainMenu {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -196,6 +219,7 @@ section {
     color: #fff;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-top: 150px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
