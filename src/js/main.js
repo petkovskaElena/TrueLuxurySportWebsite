@@ -9,4 +9,5 @@ $( document ).ready(function() {
         $("#mainMenu").removeClass("navbar-shrink");
     }
 });
+
 });
