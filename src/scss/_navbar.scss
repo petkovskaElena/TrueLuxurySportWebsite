@@ -1,127 +1,150 @@
-
 /*------ NAVBAR STYLING ------*/
+
 #mainMenu {
-  background-color: $background;
-  #logo {
-      display: none;
-  }
-  .navbar-toggler {
-      font-size: 12px;
-      right: 0;
-      padding: 13px;
-      text-transform: uppercase;
-      color: white;
-      border: 0;
-      background-color: $primary;
-  }
-  .navbar-brand {
-      color: $primary;
-      &.active,
-      &:active,
-      &:focus,
-      &:hover {
-          color: darken($primary, 10%);
-      }
-  }
-  .navbar-nav {
-      .nav-item {
-          .nav-link {
-              color: white;
-              @include main-text;
-              font-size: 16px;
-              text-transform: uppercase;
-              padding: 0 10px;
-              &:hover,
-              &:focus {
-                  color: $accent;
-                  background-color: transparent;
-              }
-          }
-      }
-      .active {
-          a {
-              color: $accent;
-              background-color: transparent;
-              font-weight: 600;
-              &:hover,
-              &:focus {
-                  color: $accent;
-                  background-color: transparent;
-              }
-          }
-      }
-  }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: white;
+                @include main-text;
+                font-size: 26px;
+                text-transform: uppercase;
+                padding: 20px 10px;
+                &:hover,
+                &:focus {
+                    color: $accent;
+                    background-color: transparent;
+                }
+            }
+        }
+        .active {
+            a {
+                color: $accent;
+                background-color: transparent;
+                font-weight: 600;
+                &:hover,
+                &:focus {
+                    color: $accent;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+/*------ MEADIA QUERIES ------*/
+
+@media (max-width: 768px) {
+    #mainMenu {
+        background-color: rgba($background-dark, .6);
+        padding: 20px 0;
+        #logo {
+            display: none;
+        }
+        .phoneNumbers {
+            display: none;
+        }
+        .navbar-toggler {
+            font-size: 30px;
+            right: 0;
+            padding: 13px;
+            margin-left: 50px;
+            text-transform: uppercase;
+            color: white;
+            border: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            text-decoration: none;
+        }
+    }
 }
 
 @media(min-width:992px) {
-  #mainMenu {
-      -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
-      -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
-      transition: padding-top 0.6s, padding-bottom 0.6s;
-      border: none;
-      background-color: transparent;
-      #navLinks {
-          margin-top: 110px;
-      }
-      #phoneNumbers {
-          color: white;
-          display: block;
-          position: absolute;
-          top: 55px;
-          z-index: 3;
-          text-align: left;
-          right: 5%;
-          p {
-              margin-bottom: 0;
-          }
-      }
-      #logo {
-          display: block;
-          position: absolute;
-          top: 15px;
-          z-index: 2;
-          width: 200px;
-          margin-left: -100px;
-          left: 50%;
-          -webkit-transition: all 0.6s;
-          -moz-transition: all 0.6s;
-          transition: all 0.6s;
-      }
-      #logo img {
-          width: 100%;
-          height: auto;
-      }
-      .navbar-brand {
-          position: absolute;
-          top: 0px;
-          z-index: 2;
-          width: 200px;
-          height: 110px;
-          margin-left: -200px;
-          left: 50%;
-          -webkit-transition: all 0.6s;
-          -moz-transition: all 0.6s;
-          transition: all 0.6s;
-      }
-      .navbar-nav {
-          .nav-item {
-              .nav-link {
-                  padding: 16px !important;
-                  -webkit-transition: all 0.6s;
-                  -moz-transition: all 0.6s;
-                  transition: all 0.6s;
-              }
-          }
-      }
-      &.navbar-shrink {
-          padding-top: 0;
-          padding-bottom: 0;
-          background-color: rgba($background-dark, .6);
-          #logo {
-              -moz-transform: scale(0.8);
-              -webkit-transform: scale(0.8);
-              transform: scale(0.8);
-          }
-      }
-  }
+    .navbar-collapse {
+        background-color: transparent;
+    }
+    #mainMenu {
+        -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+        -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+        transition: padding-top 0.6s, padding-bottom 0.6s;
+        border: none;
+        background-color: transparent;
+        #navLinks {
+            margin-top: 130px;
+        }
+        .phoneNumbers {
+            color: white;
+            display: block;
+            position: absolute;
+            top: 55px;
+            z-index: 3;
+            text-align: left;
+            right: 5%;
+            .flag {
+                width: 22px;
+                height: auto;
+                margin-right: 10px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+        #logo {
+            display: block;
+            position: absolute;
+            top: 15px;
+            z-index: 2;
+            width: 150px;
+            margin-left: -100px;
+            left: 50%;
+            -webkit-transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+        #logo img {
+            width: 100%;
+            height: auto;
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: white;
+                    @include main-text;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    padding: 10px !important;
+                    -webkit-transition: all 0.6s;
+                    -moz-transition: all 0.6s;
+                    transition: all 0.6s;
+                    &:hover,
+                    &:focus {
+                        color: $accent;
+                        background-color: transparent;
+                    }
+                }
+            }
+            .active {
+                a {
+                    color: $accent;
+                    background-color: transparent;
+                    font-weight: 600;
+                    &:hover,
+                    &:focus {
+                        color: $accent;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &.navbar-shrink {
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: rgba($background-dark, .8);
+            #logo {
+                -moz-transform: scale(0.9);
+                -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+            }
+        }
+    }
 }

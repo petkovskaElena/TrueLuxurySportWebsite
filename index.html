@@ -22,25 +22,32 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainMenu">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-controls="navLinks" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <a id="logo" href="#" class="logo-brand">
-                <img src="src/images/TLS_White.png">
+                <img src="src/images/logo-brand.png">
             </a>
-            <div class="" id="phoneNumbers">
-                <p class="small text-right">+44 (0) 203 137 1247</p>
-                <p class="small text-right">+1 800 635 8124</p>
+            <div class="phoneNumbers">
+                <div class="d-flex flex-column">
+                    <p class="small">
+                        <img class="flag" src="src/images/icons/uk-flag-icon.png">+44 (0) 203 137 1247</p>
+                </div>
+                <div class="d-flex flex-column">
+                    <p class="small">
+                        <img class="flag" src="src/images/icons/us-flag-icon.png">+1 (0) 800 635 8124</p>
+                </div>
             </div>
 
-            <div class="collapse navbar-collapse" id="navLinks">
-                <ul class="navbar-nav nav-fill w-100">
+            <div class="collapse navbar-collapse justify-content-center" id="navLinks">
+                <ul class="navbar-nav nav-fill">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home
-                      <span class="sr-only">(current)</span>
-                    </a>
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -82,13 +89,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="mb-3">Headline</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor
-                        mauris molestie elit, et lacinia ipsum quam nec dui. </p>
+                    <h1 class="mb-5">Headline</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec,
+                        mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor
+                        sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-sm-12 mb-4">
+                <div class="col-md-12 mb-4">
                     <a href="#">
                         <div class="item">
                             <img class="img-fluid" id="bestOfBritain" alt="">
@@ -96,7 +104,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-12 col-lg-4 mb-4">
                     <a href="#">
                         <div class="item">
                             <img class="img-fluid" id="concierge" alt="">
@@ -104,7 +112,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-12 col-lg-4 mb-4">
                     <a href="#">
                         <div class="item">
                             <img class="img-fluid" id="exclusiveAccess" alt="">
@@ -112,7 +120,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-12 col-lg-4 mb-4">
                     <a href="#">
                         <div class="item">
                             <img class="img-fluid" id="bestOfTheRest" alt="">
@@ -129,31 +137,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Have questions? Ask us anything</h1>
+                    <h2 class="mb-5">Get in touch</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <span class="fa-stack fa-1x">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fas fa-phone fa-stack-1x fa-inverse"></i>
-          </span>
+                <div class="contact-numbers col-md-12 col-lg-4 d-flex justify-content-center align-items-center">
+                    <img id="ukFlag" src="src/images/icons/uk-flag-icon.png">
                     <p class="phone-number">
-                        <b>Office:</b> +44 203 137 9740</p>
+                        <b>UK number:</b> +44 203 137 9740</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <span class="fa-stack fa-1x">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fas fa-mobile-alt fa-stack-1x fa-inverse"></i>
-          </span>
+                <div class="contact-numbers col-md-12 col-lg-4 d-flex justify-content-center align-items-center">
+                    <img id="usFlag" src="src/images/icons/us-flag-icon.png">
                     <p class="phone-number">
-                        <b>Mobile:</b> +44 786 781 1304</p>
+                        <b>US number:</b> +44 786 781 1304</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <span class="fa-stack fa-1x">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas far fa-envelope fa-stack-1x fa-inverse"></i>
-          </span>
+                <div class="contact-numbers col-md-12 col-lg-4 d-flex justify-content-center align-items-center">
+                    <i class="far fa-envelope"></i>
                     <p class="e-mail">tom@trueluxury.travel</p>
                 </div>
             </div>
@@ -161,12 +160,12 @@
     </section>
 
     <!-- Footer Top  -->
-    <section class="footer">
+    <section class="footer-top">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-12 subscribe">
                     <h4 class="text-center mb-3">Subscribe to our newsletter</h4>
-                    <div class="input-group mb-5">
+                    <div class="input-group mb-5 d-flex justify-content-center">
                         <input type="text" class="form-control" placeholder="Enter your e-mail" aria-label="E-mail">
                         <div class="input-group-append">
                             <button class="btn btn-subscribe" type="button">Subscribe</button>
@@ -176,7 +175,7 @@
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 d-flex justify-content-center">
-                    <ul class="quicklinks mt-5">
+                    <ul class="quicklinks mt-5;">
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -209,10 +208,10 @@
     <footer id="footer" class="d-flex align-items-center">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                     <p class="copyright">© 2018 True Luxury Travel</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                     <ul class="social">
                         <li>
                             <i class="fab fa-facebook-f"></i>
@@ -231,7 +230,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                     <ul class="legal-links">
                         <li>
                             <a href="#">Terms & Conditions</a>

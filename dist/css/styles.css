@@ -1,15 +1,16 @@
 /*------ THEME COLOURS ------*/
 /*------ FONTS ------*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700");
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700");
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i");
 /*------ MIXINS ------*/
-html, body {
+html,
+body {
   margin: 0; }
 
 body {
   background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 18px; }
 
@@ -19,14 +20,14 @@ html {
 
 .hero {
   color: #fff;
-  font-family: 'Lora', serif;
+  font-family: 'Crimson Text', serif;
   font-weight: 400; }
   @media (min-width: 992px) {
     .hero {
       font-size: 60px; } }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Crimson Text', serif;
   font-weight: 400;
   font-size: 45px;
   text-align: center;
@@ -36,36 +37,32 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400; }
-
-h2 {
-  font-size: 36px; }
-
-h3 {
-  font-size: 30px; }
-
-h4 {
-  font-size: 26px; }
-
-h5 {
-  font-size: 24px; }
 
 p {
   font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 25px; }
+  line-height: 1.5; }
   @media (min-width: 768px) {
     p {
       font-size: 18px;
-      line-height: 1.6;
-      margin: 0 0 35px; } }
+      line-height: 1.6; } }
 
 section {
   padding: 50px 0; }
   @media (min-width: 992px) {
     section {
       padding: 100px 0; } }
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 36px; }
+  h3 {
+    font-size: 30px; }
+  h4 {
+    font-size: 26px; }
+  h5 {
+    font-size: 24px; } }
 
 /*------ HEADER STYLING ------*/
 .header {
@@ -169,41 +166,50 @@ section {
   text-align: center; }
 
 /*------ NAVBAR STYLING ------*/
-#mainMenu {
-  background-color: #fff; }
-  #mainMenu #logo {
-    display: none; }
-  #mainMenu .navbar-toggler {
-    font-size: 12px;
-    right: 0;
-    padding: 13px;
-    text-transform: uppercase;
-    color: white;
-    border: 0;
-    background-color: #171E33; }
-  #mainMenu .navbar-brand {
-    color: #171E33; }
-    #mainMenu .navbar-brand.active, #mainMenu .navbar-brand:active, #mainMenu .navbar-brand:focus, #mainMenu .navbar-brand:hover {
-      color: #070910; }
-  #mainMenu .navbar-nav .nav-item .nav-link {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 0 10px; }
-    #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
-      color: #D8A949;
-      background-color: transparent; }
-  #mainMenu .navbar-nav .active a {
+#mainMenu .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 20px 10px; }
+  #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
     color: #D8A949;
-    background-color: transparent;
-    font-weight: 600; }
-    #mainMenu .navbar-nav .active a:hover, #mainMenu .navbar-nav .active a:focus {
-      color: #D8A949;
-      background-color: transparent; }
+    background-color: transparent; }
+
+#mainMenu .navbar-nav .active a {
+  color: #D8A949;
+  background-color: transparent;
+  font-weight: 600; }
+  #mainMenu .navbar-nav .active a:hover, #mainMenu .navbar-nav .active a:focus {
+    color: #D8A949;
+    background-color: transparent; }
+
+/*------ MEADIA QUERIES ------*/
+@media (max-width: 768px) {
+  #mainMenu {
+    background-color: rgba(22, 27, 41, 0.6);
+    padding: 20px 0; }
+    #mainMenu #logo {
+      display: none; }
+    #mainMenu .phoneNumbers {
+      display: none; }
+    #mainMenu .navbar-toggler {
+      font-size: 30px;
+      right: 0;
+      padding: 13px;
+      margin-left: 50px;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      text-decoration: none; } }
 
 @media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: transparent; }
   #mainMenu {
     -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
     -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
@@ -211,8 +217,8 @@ section {
     border: none;
     background-color: transparent; }
     #mainMenu #navLinks {
-      margin-top: 110px; }
-    #mainMenu #phoneNumbers {
+      margin-top: 130px; }
+    #mainMenu .phoneNumbers {
       color: white;
       display: block;
       position: absolute;
@@ -220,14 +226,18 @@ section {
       z-index: 3;
       text-align: left;
       right: 5%; }
-      #mainMenu #phoneNumbers p {
+      #mainMenu .phoneNumbers .flag {
+        width: 22px;
+        height: auto;
+        margin-right: 10px; }
+      #mainMenu .phoneNumbers p {
         margin-bottom: 0; }
     #mainMenu #logo {
       display: block;
       position: absolute;
       top: 15px;
       z-index: 2;
-      width: 200px;
+      width: 150px;
       margin-left: -100px;
       left: 50%;
       -webkit-transition: all 0.6s;
@@ -236,88 +246,93 @@ section {
     #mainMenu #logo img {
       width: 100%;
       height: auto; }
-    #mainMenu .navbar-brand {
-      position: absolute;
-      top: 0px;
-      z-index: 2;
-      width: 200px;
-      height: 110px;
-      margin-left: -200px;
-      left: 50%;
-      -webkit-transition: all 0.6s;
-      -moz-transition: all 0.6s;
-      transition: all 0.6s; }
     #mainMenu .navbar-nav .nav-item .nav-link {
-      padding: 16px !important;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 10px !important;
       -webkit-transition: all 0.6s;
       -moz-transition: all 0.6s;
       transition: all 0.6s; }
+      #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
+        color: #D8A949;
+        background-color: transparent; }
+    #mainMenu .navbar-nav .active a {
+      color: #D8A949;
+      background-color: transparent;
+      font-weight: 600; }
+      #mainMenu .navbar-nav .active a:hover, #mainMenu .navbar-nav .active a:focus {
+        color: #D8A949;
+        background-color: transparent; }
     #mainMenu.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: rgba(22, 27, 41, 0.6); }
+      background-color: rgba(22, 27, 41, 0.8); }
       #mainMenu.navbar-shrink #logo {
-        -moz-transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        transform: scale(0.8); } }
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9); } }
 
-.contact-info h1 {
-  margin-bottom: 100px; }
+/*------ FOOTER STYLING ------*/
+.contact-info h2 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  text-transform: uppercase; }
 
-.contact-info .fa-stack {
+.contact-info i {
   color: #D8A949;
-  margin-right: 15px; }
+  font-size: 30px;
+  margin-right: 10px; }
 
 .contact-info p {
   margin-bottom: 0; }
 
-.footer {
+.contact-info #ukFlag,
+.contact-info #usFlag {
+  margin-right: 10px; }
+
+.contact-info .contact-numbers {
+  margin-bottom: 15px; }
+
+.footer-top {
   background: linear-gradient(to bottom, rgba(23, 30, 51, 0.8) 0%, rgba(23, 30, 51, 0.8) 1%, rgba(23, 30, 51, 0.8) 100%), url("../images/footer-background.jpg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 400px; }
-  .footer h4 {
-    color: #fff;
-    text-transform: uppercase; }
-  .footer .btn-subscribe {
-    width: 240px;
-    height: 60px;
-    border-radius: 5px;
-    background-color: #D8A949;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    width: 150px; }
-    .footer .btn-subscribe:hover {
-      background-color: rgba(219, 169, 73, 0.2);
+  height: 300px; }
+  .footer-top .subscribe {
+    margin-top: 15px; }
+    .footer-top .subscribe h4 {
       color: #fff;
-      border: 2px solid #D8A949; }
-  .footer .quicklinks {
-    list-style: none; }
-    .footer .quicklinks li {
-      display: inline; }
-      .footer .quicklinks li a {
+      text-transform: uppercase; }
+    .footer-top .subscribe .btn-subscribe {
+      width: 240px;
+      height: 60px;
+      border-radius: 5px;
+      background-color: #D8A949;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 150px; }
+      .footer-top .subscribe .btn-subscribe:hover {
+        background-color: rgba(219, 169, 73, 0.2);
         color: #fff;
-        text-transform: uppercase;
-        padding: 0 20px;
-        font-size: 14px; }
-        .footer .quicklinks li a:hover {
-          color: #D8A949;
-          text-decoration: none; }
+        border: 2px solid #D8A949; }
 
 footer {
   background-color: #161B29;
   height: 100px; }
   footer .copyright {
     color: #fff;
-    font-size: 14px;
-    margin: 0; }
+    font-size: 14px; }
   footer .legal-links {
     list-style: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0; }
     footer .legal-links li {
       display: inline; }
       footer .legal-links li a {
@@ -329,7 +344,8 @@ footer {
           text-decoration: none; }
   footer .social {
     list-style: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0; }
     footer .social li {
       display: inline; }
       footer .social li .fab {
@@ -338,3 +354,82 @@ footer {
         padding: 0 13px; }
         footer .social li .fab:hover {
           color: #fff; }
+
+/*------ MEADIA QUERIES ------*/
+@media (max-width: 575.98px) {
+  .quicklinks {
+    display: none; }
+  footer {
+    height: auto;
+    padding: 20px 0;
+    text-align: center; }
+    footer .legal-links {
+      padding: 0;
+      margin-top: 15px; }
+      footer .legal-links li {
+        display: block; }
+    footer .social {
+      margin-bottom: 0;
+      padding: 0; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .quicklinks {
+    display: none; }
+  footer {
+    height: auto;
+    padding: 20px 0; }
+    footer .legal-links {
+      padding: 0; }
+      footer .legal-links li {
+        display: block; }
+        footer .legal-links li a {
+          text-align: left; }
+    footer .social {
+      margin-bottom: 0;
+      padding: 0; }
+      footer .social li .fab {
+        font-size: 18px; } }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .quicklinks {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .contact-numbers {
+    margin-bottom: 0; }
+  .footer-top {
+    height: 400px; }
+    .footer-top h4 {
+      color: #fff;
+      text-transform: uppercase; }
+    .footer-top .btn-subscribe {
+      width: 240px;
+      height: 60px;
+      border-radius: 5px;
+      background-color: #D8A949;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 150px; }
+      .footer-top .btn-subscribe:hover {
+        background-color: rgba(219, 169, 73, 0.2);
+        color: #fff;
+        border: 2px solid #D8A949; }
+    .footer-top .quicklinks {
+      list-style: none; }
+      .footer-top .quicklinks li {
+        display: inline; }
+        .footer-top .quicklinks li a {
+          color: #fff;
+          text-transform: uppercase;
+          padding: 0 20px;
+          font-size: 14px; }
+          .footer-top .quicklinks li a:hover {
+            color: #D8A949;
+            text-decoration: none; }
+  footer {
+    background-color: #161B29;
+    height: 100px; }
+    footer .copyright {
+      margin: 0; } }

@@ -1,68 +1,184 @@
+/*------ FOOTER STYLING ------*/
+
 .contact-info {
-    h1 {
-        margin-bottom: 100px;
+    h2 {
+        @include headline;
+        text-transform: uppercase;
     }
-    .fa-stack {
+    i {
         color: $accent;
-        margin-right: 15px;
+        font-size: 30px;
+        margin-right: 10px;
     }
     p {
         margin-bottom: 0;
     }
+    #ukFlag,
+    #usFlag {
+        margin-right: 10px;
+    }
+    .contact-numbers {
+        margin-bottom: 15px;
+    }
 }
-.footer {
-    background: linear-gradient(to bottom, rgba(23,30,51,0.8) 0%,rgba(23,30,51,0.8) 1%,rgba(23,30,51,0.8) 100%), url('../images/footer-background.jpg') no-repeat center center scroll;
+
+.footer-top {
+    background: linear-gradient(to bottom, rgba(23, 30, 51, 0.8) 0%, rgba(23, 30, 51, 0.8) 1%, rgba(23, 30, 51, 0.8) 100%), url('../images/footer-background.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 400px;
-    h4 {
-        color: $white;
-        text-transform: uppercase;
-    }
-    .btn-subscribe {
-        @include button;
-        width: 150px;
-        &:hover {
-            @include button-hover;
+    height: 300px;
+    .subscribe {
+        margin-top: 15px;
+        h4 {
+            color: $white;
+            text-transform: uppercase;
+        }
+        .btn-subscribe {
+            @include button;
+            width: 150px;
+            &:hover {
+                @include button-hover;
+            }
         }
     }
-    .quicklinks {
-        list-style: none;
-       li {
-           display: inline;
-           a {
-               color: $white;
-               text-transform: uppercase;
-               padding: 0 20px;
-               font-size: 14px;
-               &:hover {
-                   color: $accent;
-                   text-decoration: none;
-               }
-           }
-       }
-    }
-
 }
+
 footer {
-       background-color: $background-dark;
-       height: 100px;
-       .copyright {
-           color: $white;
-            font-size: 14px;
-            margin: 0;
+    background-color: $background-dark;
+    height: 100px;
+    .copyright {
+        color: $white;
+        font-size: 14px;
+    }
+    .legal-links {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+        li {
+            display: inline;
+            a {
+                color: $white;
+                font-size: 14px;
+                padding: 0 10px;
+                &:hover {
+                    color: $accent;
+                    text-decoration: none;
+                }
+            }
         }
+    }
+    .social {
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+        li {
+            display: inline;
+            .fab {
+                color: $accent;
+                font-size: 20px;
+                padding: 0 13px;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*------ MEADIA QUERIES ------*/
+
+@media (max-width: 575.98px) {
+    .quicklinks {
+        display: none;
+    }
+    footer {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
         .legal-links {
-            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            li {
+                display: block;
+            }
+        }
+        .social {
             margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .quicklinks {
+        display: none;
+    }
+    footer {
+        height: auto;
+        padding: 20px 0;
+        .legal-links {
+            padding: 0;
+            li {
+                display: block;
+                a {
+                    text-align: left;
+                }
+            }
+        }
+        .social {
+            margin-bottom: 0;
+            padding: 0;
+            li {
+                .fab {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .quicklinks {
+        display: none;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .contact-numbers {
+        margin-bottom: 0;
+    }
+    .footer-top {
+        height: 400px;
+        h4 {
+            color: $white;
+            text-transform: uppercase;
+        }
+        .btn-subscribe {
+            @include button;
+            width: 150px;
+            &:hover {
+                @include button-hover;
+            }
+        }
+        .quicklinks {
+            list-style: none;
             li {
                 display: inline;
                 a {
                     color: $white;
+                    text-transform: uppercase;
+                    padding: 0 20px;
                     font-size: 14px;
-                    padding: 0 10px;
                     &:hover {
                         color: $accent;
                         text-decoration: none;
@@ -70,19 +186,15 @@ footer {
                 }
             }
         }
-        .social {
-            list-style: none;
-            margin-bottom: 0;
-            li {
-                display: inline;
-               .fab {
-                    color: $accent;
-                    font-size: 20px;
-                    padding: 0 13px;
-                    &:hover {
-                        color: $white;
-                    }
-                }
-            }
+    }
+    footer {
+        background-color: $background-dark;
+        height: 100px;
+        .copyright {
+            margin: 0;
         }
+    }
 }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
