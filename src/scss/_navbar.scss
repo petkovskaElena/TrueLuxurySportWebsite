@@ -1,79 +1,127 @@
-.navbarTop {
-  background-color: transparent;
-  color: white;
-  position: absolute;
-  width: 100%;
-  margin-top: 50px;
-  .logo {
-    margin-right: 60px;
-    width: 200px;
-    height: 110px;
-    position: relative;
-    img {
-      border: none;
-    }
-    #logoImage {
-      //background: url("../images/TLS_White.png") no-repeat center center;
-      webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      width: 200px;
-      height: 110px;
-    }
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
 
+/*------ NAVBAR STYLING ------*/
 #mainMenu {
-  @include main-text;
-  font-size: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  height: 70px;
-  margin-bottom: 0;
-  background: blue !important;
+  background-color: $background;
+  #logo {
+      display: none;
+  }
+  .navbar-toggler {
+      font-size: 12px;
+      right: 0;
+      padding: 13px;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      background-color: $primary;
+  }
+  .navbar-brand {
+      color: $primary;
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+          color: darken($primary, 10%);
+      }
+  }
   .navbar-nav {
-    li {
-      a {
-        color: white;
-        text-transform: uppercase;
-        padding: 24px 20px;
-        &:hover,
-        &:focus {
-          color: $accent;
-          background-color: transparent;
-        }
+      .nav-item {
+          .nav-link {
+              color: white;
+              @include main-text;
+              font-size: 16px;
+              text-transform: uppercase;
+              padding: 0 10px;
+              &:hover,
+              &:focus {
+                  color: $accent;
+                  background-color: transparent;
+              }
+          }
       }
-    }
-    .active {
-      a {
-        color: $accent;
-        background-color: transparent;
-        font-weight: 600;
-        &:hover,
-        &:focus {
-          color: $accent;
-          background-color: transparent;
-        }
+      .active {
+          a {
+              color: $accent;
+              background-color: transparent;
+              font-weight: 600;
+              &:hover,
+              &:focus {
+                  color: $accent;
+                  background-color: transparent;
+              }
+          }
       }
-    }
   }
 }
 
 @media(min-width:992px) {
   #mainMenu {
-    color: $white;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-top: 150px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background: transparent !important;
-    position: absolute;
+      -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+      -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+      transition: padding-top 0.6s, padding-bottom 0.6s;
+      border: none;
+      background-color: transparent;
+      #navLinks {
+          margin-top: 110px;
+      }
+      #phoneNumbers {
+          color: white;
+          display: block;
+          position: absolute;
+          top: 55px;
+          z-index: 3;
+          text-align: left;
+          right: 5%;
+          p {
+              margin-bottom: 0;
+          }
+      }
+      #logo {
+          display: block;
+          position: absolute;
+          top: 15px;
+          z-index: 2;
+          width: 200px;
+          margin-left: -100px;
+          left: 50%;
+          -webkit-transition: all 0.6s;
+          -moz-transition: all 0.6s;
+          transition: all 0.6s;
+      }
+      #logo img {
+          width: 100%;
+          height: auto;
+      }
+      .navbar-brand {
+          position: absolute;
+          top: 0px;
+          z-index: 2;
+          width: 200px;
+          height: 110px;
+          margin-left: -200px;
+          left: 50%;
+          -webkit-transition: all 0.6s;
+          -moz-transition: all 0.6s;
+          transition: all 0.6s;
+      }
+      .navbar-nav {
+          .nav-item {
+              .nav-link {
+                  padding: 16px !important;
+                  -webkit-transition: all 0.6s;
+                  -moz-transition: all 0.6s;
+                  transition: all 0.6s;
+              }
+          }
+      }
+      &.navbar-shrink {
+          padding-top: 0;
+          padding-bottom: 0;
+          background-color: rgba($background-dark, .6);
+          #logo {
+              -moz-transform: scale(0.8);
+              -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+          }
+      }
   }
 }
