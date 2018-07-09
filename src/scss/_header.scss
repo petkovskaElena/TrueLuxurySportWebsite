@@ -17,6 +17,9 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    h1 {
+        text-transform: uppercase;
+    }
     h3 {
         font-weight: 300;
         color: $white;

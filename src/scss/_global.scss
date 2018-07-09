@@ -27,7 +27,6 @@ h1 {
     @include headline;
     font-size: 36px;
     text-align: center;
-    text-transform: uppercase;
 }
 
 h2 {
@@ -51,7 +50,7 @@ p {
     line-height: 1.5;
     @media(min-width: 768px) {
         font-size: 18px;
-        line-height: 1.6;
+        line-height: 1.8;
     }
 }
 
