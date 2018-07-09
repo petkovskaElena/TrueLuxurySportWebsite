@@ -175,30 +175,44 @@ section {
   text-align: center; }
 
 /*------ NAVBAR STYLING ------*/
-#mainMenu #logo {
-  display: none; }
-
-#mainMenu .phoneNumbers {
-  display: none; }
-
-#mainMenu .navbar-nav .nav-item .nav-link {
-  color: white;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 26px;
-  text-transform: uppercase;
-  padding: 20px 10px; }
-  #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
+#mainMenu {
+  padding: 30px 16px;
+  -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+  -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+  transition: padding-top 0.6s, padding-bottom 0.6s;
+  border: none;
+  background-color: transparent; }
+  #mainMenu #logo {
+    display: none; }
+  #mainMenu .phoneNumbers {
+    display: none; }
+  #mainMenu .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 10px; }
+    #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
+      color: #D8A949;
+      background-color: transparent; }
+  #mainMenu .navbar-nav .active a {
     color: #D8A949;
-    background-color: transparent; }
-
-#mainMenu .navbar-nav .active a {
-  color: #D8A949;
-  background-color: transparent;
-  font-weight: 600; }
-  #mainMenu .navbar-nav .active a:hover, #mainMenu .navbar-nav .active a:focus {
-    color: #D8A949;
-    background-color: transparent; }
+    background-color: transparent;
+    font-weight: 600; }
+    #mainMenu .navbar-nav .active a:hover, #mainMenu .navbar-nav .active a:focus {
+      color: #D8A949;
+      background-color: transparent; }
+  #mainMenu.navBackground {
+    background-color: rgba(22, 27, 41, 0.8); }
+  #mainMenu.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(22, 27, 41, 0.8); }
+    #mainMenu.navbar-shrink #logo {
+      -moz-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); }
 
 /*------ MEADIA QUERIES ------*/
 @media (max-width: 768px) {
@@ -219,16 +233,9 @@ section {
       background-color: transparent;
       border: none;
       outline: none;
-      text-decoration: none; }
-    #mainMenu .navbar-collapse {
-      -webkit-transition: all 0.7s;
-      -moz-transition: all 0.7s;
-      transition: all 0.7s;
-      background-color: rgba(22, 27, 41, 0.6); } }
+      text-decoration: none; } }
 
 @media (min-width: 992px) {
-  .navbar-collapse {
-    background-color: transparent; }
   #mainMenu {
     padding: 30px 16px;
     -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;

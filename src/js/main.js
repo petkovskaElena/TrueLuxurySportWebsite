@@ -9,8 +9,8 @@ $(document).ready(function () {
         }
     });
 
-    $("#test").on('click', function () {
-        $("#mainMenu").css("background-color", "rgba(black, .6);");
+    $('#btnToggle').on('click', function () {
+        $("#mainMenu").toggleClass('navBackground');
     });
 
 

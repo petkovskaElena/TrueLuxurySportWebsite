@@ -1,6 +1,12 @@
 /*------ NAVBAR STYLING ------*/
 
 #mainMenu {
+    padding: 30px 16px;
+    -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+    -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+    transition: padding-top 0.6s, padding-bottom 0.6s;
+    border: none;
+    background-color: transparent;
     #logo {
         display: none;
     }
@@ -12,9 +18,9 @@
             .nav-link {
                 color: white;
                 @include main-text;
-                font-size: 26px;
+                font-size: 16px;
                 text-transform: uppercase;
-                padding: 20px 10px;
+                padding: 15px 10px;
                 &:hover,
                 &:focus {
                     color: $accent;
@@ -33,6 +39,22 @@
                     background-color: transparent;
                 }
             }
+        }
+    }
+    &.navBackground {
+        background-color: rgba($background-dark, .8); // transition: background-color .5s linear;
+        // -moz-transition: background-color .5s linear;
+        // -webkit-transition: background-color .5s linear;
+        // -ms-transition: background-color .5s linear;
+    }
+    &.navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: rgba($background-dark, .8);
+        #logo {
+            -moz-transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
         }
     }
 }
@@ -62,18 +84,17 @@
             text-decoration: none;
         }
         .navbar-collapse {
-            -webkit-transition: all 0.7s;
-            -moz-transition: all 0.7s;
-            transition: all 0.7s;
-            background-color: rgba($background-dark, .6);
+            // -webkit-transition: all 0.3s;
+            // -moz-transition: all 0.3s;
+            // transition: all 0.3s;
         }
     }
 }
 
 @media(min-width:992px) {
-    .navbar-collapse {
-        background-color: transparent;
-    }
+    // .navbar-collapse {
+    //     background-color: transparent;
+    // }
     #mainMenu {
         padding: 30px 16px;
         -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
