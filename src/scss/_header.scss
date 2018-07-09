@@ -17,13 +17,9 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    h1 {
-        text-transform: uppercase;
-    }
     h3 {
         font-weight: 300;
         color: $white;
-        text-transform: uppercase;
         line-height: 37px;
     }
     .btn-main {
@@ -97,7 +93,7 @@
         -o-background-size: cover;
         background-size: cover;
     }
-    .centeredTitle {
+    .centered-title {
         position: absolute;
         top: 50%;
         left: 50%;

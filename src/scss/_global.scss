@@ -15,14 +15,6 @@ html {
     height: 100%;
 }
 
-.hero {
-    color: $white;
-    @include hero;
-    @media (min-width: 992px) {
-        font-size: 60px;
-    }
-}
-
 h1 {
     @include headline;
     font-size: 36px;
@@ -59,6 +51,30 @@ section {
     @media(min-width: 992px) {
         padding: 100px 0;
     }
+}
+
+.hero {
+    color: $white;
+    text-transform: uppercase;
+    @include hero;
+    @media (min-width: 992px) {
+        font-size: 60px;
+    }
+}
+
+.headline {
+    text-transform: uppercase;
+}
+
+.header-half {
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
 }
 
 @media (min-width: 992px) {
