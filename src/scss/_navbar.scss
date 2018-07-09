@@ -1,6 +1,12 @@
 /*------ NAVBAR STYLING ------*/
 
 #mainMenu {
+    #logo {
+        display: none;
+    }
+    .phoneNumbers {
+        display: none;
+    }
     .navbar-nav {
         .nav-item {
             .nav-link {
@@ -46,7 +52,7 @@
             font-size: 30px;
             right: 0;
             padding: 13px;
-            margin-left: 50px;
+            margin-left: 10px;
             text-transform: uppercase;
             color: white;
             border: 0;
