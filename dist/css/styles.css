@@ -12,7 +12,8 @@ body {
   background-color: #fff;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 18px;
+  color: #1C2230; }
 
 html {
   width: 100%;
@@ -88,7 +89,7 @@ section {
   .header-container .btn-main {
     width: 240px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #D8A949;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -188,7 +189,6 @@ section {
 /*------ MEADIA QUERIES ------*/
 @media (max-width: 768px) {
   #mainMenu {
-    background-color: rgba(22, 27, 41, 0.6);
     padding: 20px 0; }
     #mainMenu #logo {
       display: none; }
@@ -205,7 +205,12 @@ section {
       background-color: transparent;
       border: none;
       outline: none;
-      text-decoration: none; } }
+      text-decoration: none; }
+    #mainMenu .navbar-collapse {
+      -webkit-transition: all 0.7s;
+      -moz-transition: all 0.7s;
+      transition: all 0.7s;
+      background-color: rgba(22, 27, 41, 0.6); } }
 
 @media (min-width: 992px) {
   .navbar-collapse {
@@ -271,9 +276,11 @@ section {
       padding-bottom: 0;
       background-color: rgba(22, 27, 41, 0.8); }
       #mainMenu.navbar-shrink #logo {
-        -moz-transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9); } }
+        -webkit-transition: opacity 3s ease-in-out;
+        -moz-transition: opacity 3s ease-in-out;
+        -ms-transition: opacity 3s ease-in-out;
+        -o-transition: opacity 3s ease-in-out;
+        opacity: 0; } }
 
 /*------ FOOTER STYLING ------*/
 .contact-info h2 {
@@ -311,17 +318,21 @@ section {
     .footer-top .subscribe .btn-subscribe {
       width: 240px;
       height: 60px;
-      border-radius: 5px;
+      border-radius: 2px;
       background-color: #D8A949;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
+      border-radius: 0 2px 2px 0;
       width: 150px; }
       .footer-top .subscribe .btn-subscribe:hover {
         background-color: rgba(219, 169, 73, 0.2);
         color: #fff;
         border: 2px solid #D8A949; }
+  .footer-top #emailAddress {
+    border: none;
+    border-radius: 2px 0 0 2px; }
 
 footer {
   background-color: #161B29;
@@ -405,7 +416,7 @@ footer {
     .footer-top .btn-subscribe {
       width: 240px;
       height: 60px;
-      border-radius: 5px;
+      border-radius: 2px;
       background-color: #D8A949;
       color: #fff;
       font-family: 'Montserrat', sans-serif;

@@ -7,6 +7,7 @@ body {
     background-color: $background;
     @include main-text;
     font-size: 18px;
+    color: $text;
 }
 
 html {

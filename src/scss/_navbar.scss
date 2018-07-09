@@ -35,7 +35,6 @@
 
 @media (max-width: 768px) {
     #mainMenu {
-        background-color: rgba($background-dark, .6);
         padding: 20px 0;
         #logo {
             display: none;
@@ -55,6 +54,12 @@
             border: none;
             outline: none;
             text-decoration: none;
+        }
+        .navbar-collapse {
+            -webkit-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+            transition: all 0.7s;
+            background-color: rgba($background-dark, .6);
         }
     }
 }
@@ -141,9 +146,14 @@
             padding-bottom: 0;
             background-color: rgba($background-dark, .8);
             #logo {
-                -moz-transform: scale(0.9);
-                -webkit-transform: scale(0.9);
-                transform: scale(0.9);
+                // -moz-transform: scale(0.9);
+                // -webkit-transform: scale(0.9);
+                // transform: scale(0.9);
+                -webkit-transition: opacity 3s ease-in-out;
+                -moz-transition: opacity 3s ease-in-out;
+                -ms-transition: opacity 3s ease-in-out;
+                -o-transition: opacity 3s ease-in-out;
+                 opacity: 0;
             }
         }
     }

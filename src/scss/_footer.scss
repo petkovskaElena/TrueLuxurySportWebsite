@@ -37,11 +37,16 @@
         }
         .btn-subscribe {
             @include button;
+            border-radius: 0 2px 2px 0;
             width: 150px;
             &:hover {
                 @include button-hover;
             }
         }
+    }
+    #emailAddress {
+        border: none;
+        border-radius: 2px 0 0 2px;
     }
 }
 
