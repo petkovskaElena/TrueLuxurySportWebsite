@@ -1,2 +1,695 @@
+/*------ THEME COLOURS ------*/
+/*------ FONTS ------*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i");
+/*------ MIXINS ------*/
+html,
 body {
-  background-color: #000; }
+  margin: 0; }
+
+body {
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #1C2230; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+h1 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 26px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 22px; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 18px;
+      line-height: 1.8; } }
+
+section {
+  padding: 50px 0; }
+  @media (min-width: 992px) {
+    section {
+      padding: 100px 0; } }
+
+.hero {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400; }
+  @media (min-width: 992px) {
+    .hero {
+      font-size: 60px; } }
+
+.headline {
+  text-transform: uppercase; }
+
+.header-half {
+  height: 500px;
+  width: 100%;
+  background-color: transparent;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden; }
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 45px; }
+  h2 {
+    font-size: 36px; }
+  h3 {
+    font-size: 30px; }
+  h4 {
+    font-size: 26px; }
+  h5 {
+    font-size: 24px; } }
+
+/*------ HEADER STYLING ------*/
+.header {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-background.jpg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden; }
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  .header-container h3 {
+    font-weight: 300;
+    color: #fff;
+    line-height: 37px; }
+  .header-container .btn-main {
+    width: 240px;
+    height: 60px;
+    border-radius: 2px;
+    background-color: #D8A949;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase; }
+    .header-container .btn-main:hover {
+      background-color: rgba(219, 169, 73, 0.2);
+      color: #fff;
+      border: 2px solid #D8A949;
+      transition: all 0.4s; }
+  .header-container .divider {
+    border: 0;
+    height: 1px;
+    background: #D8A949;
+    width: 200px; }
+
+.main-content .item {
+  position: relative;
+  overflow: hidden; }
+  .main-content .item img {
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+  .main-content .item:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.main-content #bestOfBritain {
+  background: url("../images/best_of_britain.jpg") no-repeat;
+  width: 100%;
+  height: 360px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.main-content #concierge {
+  background: url("../images/concierge.jpg") no-repeat;
+  min-width: 360px;
+  width: 100%;
+  height: 360px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.main-content #exclusiveAccess {
+  background: url("../images/exclusive_access.jpg") no-repeat;
+  min-width: 360px;
+  width: 100%;
+  height: 360px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.main-content #bestOfTheRest {
+  background: url("../images/best_of_the_rest.jpg") no-repeat;
+  min-width: 360px;
+  width: 100%;
+  height: 360px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.main-content .centered-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center; }
+
+#aboutHeader {
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-about.jpg") no-repeat center center scroll; }
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  .about-container h1 {
+    margin-top: 100px; }
+  .about-container .divider {
+    border: 0;
+    height: 1px;
+    background: #D8A949;
+    width: 200px; }
+
+.founders-info .item {
+  position: relative; }
+
+.founders-info #founderOne {
+  background: url("../images/founder1.jpg") no-repeat;
+  width: 100%;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.founders-info #founderTwo {
+  background: url("../images/founder2.jpg") no-repeat;
+  width: 100%;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.founders-info h5 {
+  color: #5D6161; }
+
+@media (max-width: 767px) {
+  .header-half {
+    height: 300px; }
+  .divider {
+    display: none; }
+  .about-container h1 {
+    margin-top: 50px; }
+  .founders-info .item {
+    position: relative; }
+  .founders-info #founderOne,
+  .founders-info #founderTwo {
+    width: 100%;
+    height: 300px; } }
+
+@media (min-width: 768px) {
+  .about-container h1 {
+    margin-top: 100px; } }
+
+@media (min-width: 992px) {
+  .about-container h1 {
+    margin-top: 100px; } }
+
+/*------ BEST OF BRITAIN STYLING ------*/
+#bestOfBritain {
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/best_of_britain.jpg") no-repeat center center scroll; }
+
+/*------ EVENTS ------*/
+.btn-more {
+  width: 240px;
+  height: 60px;
+  border-radius: 2px;
+  background-color: #D8A949;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 auto; }
+  .btn-more:hover {
+    background-color: transparent;
+    color: #D8A949;
+    border: 2px solid #D8A949; }
+
+.event-item {
+  position: relative;
+  overflow: hidden;
+  color: #fff; }
+  .event-item .top-left {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 10; }
+    .event-item .top-left i {
+      color: #D8A949; }
+  .event-item img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+  .event-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s ease;
+    background-color: rgba(22, 27, 41, 0.8); }
+  .event-item figcaption {
+    text-align: left; }
+    .event-item figcaption .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      height: 70%; }
+  .event-item h2,
+  .event-item .more-info {
+    -webkit-transform: translate3d(0, 160px, 0);
+    transform: translate3d(0, 160px, 0); }
+  .event-item h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s; }
+  .event-item .more-info {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s; }
+  .event-item:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  .event-item:hover .overlay {
+    opacity: 1; }
+  .event-item:hover .more-info {
+    opacity: 1; }
+  .event-item:hover h2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .event-item:hover .more-info {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s; }
+
+/*------ EXPERIENCES ------*/
+.carousel {
+  margin-bottom: 0; }
+  .carousel .carousel-control-prev {
+    left: -10%; }
+  .carousel .carousel-control-prev-icon {
+    background-image: url("src/images/icons/arrow-left.svg"); }
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center; }
+
+.experience-item {
+  position: relative;
+  overflow: hidden;
+  color: #fff; }
+  .experience-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+  .experience-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s ease;
+    background-color: rgba(22, 27, 41, 0.8); }
+  .experience-item figcaption {
+    text-align: center; }
+    .experience-item figcaption .caption {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      height: 50%; }
+  .experience-item h2,
+  .experience-item .more-info {
+    -webkit-transform: translate3d(0, 160px, 0);
+    transform: translate3d(0, 160px, 0); }
+  .experience-item h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s; }
+  .experience-item .more-info {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s; }
+  .experience-item:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  .experience-item:hover .overlay {
+    opacity: 1; }
+  .experience-item:hover .more-info {
+    opacity: 1; }
+  .experience-item:hover h2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .experience-item:hover .more-info {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s; }
+
+/*------ NAVBAR STYLING ------*/
+#mainMenu {
+  padding: 30px 16px;
+  -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+  -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+  transition: padding-top 0.6s, padding-bottom 0.6s;
+  border: none;
+  background-color: transparent; }
+  #mainMenu #logo {
+    display: none; }
+  #mainMenu .phoneNumbers {
+    display: none; }
+  #mainMenu .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 10px; }
+    #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
+      color: #D8A949;
+      background-color: transparent; }
+  #mainMenu .navbar-nav .nav-item .active {
+    color: #D8A949 !important;
+    background-color: transparent;
+    font-weight: 600; }
+  #mainMenu.navBackground {
+    background-color: rgba(22, 27, 41, 0.8); }
+  #mainMenu.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(22, 27, 41, 0.8); }
+    #mainMenu.navbar-shrink #logo {
+      -moz-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); }
+
+/*------ MEADIA QUERIES ------*/
+@media (max-width: 768px) {
+  #mainMenu {
+    padding: 20px 0; }
+    #mainMenu #logo {
+      display: none; }
+    #mainMenu .phoneNumbers {
+      display: none; }
+    #mainMenu .navbar-toggler {
+      font-size: 30px;
+      right: 0;
+      padding: 13px;
+      margin-left: 10px;
+      text-transform: uppercase;
+      color: white;
+      border: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      text-decoration: none; } }
+
+@media (min-width: 992px) {
+  #mainMenu {
+    padding: 30px 16px;
+    -webkit-transition: padding-top 0.6s, padding-bottom 0.6s;
+    -moz-transition: padding-top 0.6s, padding-bottom 0.6s;
+    transition: padding-top 0.6s, padding-bottom 0.6s;
+    border: none;
+    background-color: transparent; }
+    #mainMenu #navLinks {
+      margin-top: 100px; }
+    #mainMenu .phoneNumbers {
+      color: white;
+      display: block;
+      position: absolute;
+      top: 55px;
+      z-index: 3;
+      text-align: left;
+      right: 5%; }
+      #mainMenu .phoneNumbers .flag {
+        width: 22px;
+        height: auto;
+        margin-right: 10px; }
+    #mainMenu #logo {
+      display: block;
+      position: absolute;
+      top: 15px;
+      z-index: 2;
+      width: 140px;
+      margin-left: -100px;
+      left: 51%;
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      transition: all 0.6s; }
+    #mainMenu #logo img {
+      width: 100%;
+      height: auto; }
+    #mainMenu .navbar-nav .nav-item .nav-link {
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 10px 20px !important; }
+      #mainMenu .navbar-nav .nav-item .nav-link:hover, #mainMenu .navbar-nav .nav-item .nav-link:focus {
+        color: #D8A949;
+        background-color: transparent; }
+    #mainMenu.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: rgba(22, 27, 41, 0.8); }
+      #mainMenu.navbar-shrink #logo {
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9); } }
+
+/*------ FOOTER STYLING ------*/
+.contact-info h2 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.contact-info i {
+  color: #D8A949;
+  font-size: 30px;
+  margin-right: 10px; }
+
+.contact-info p {
+  margin-bottom: 0; }
+
+.contact-info #ukFlag,
+.contact-info #usFlag {
+  margin-right: 10px; }
+
+.contact-info .contact-numbers {
+  margin-bottom: 15px; }
+
+.footer-top {
+  background: linear-gradient(to bottom, rgba(23, 30, 51, 0.8) 0%, rgba(23, 30, 51, 0.8) 1%, rgba(23, 30, 51, 0.8) 100%), url("../images/footer-background.jpg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px; }
+  .footer-top .subscribe {
+    margin-top: 15px; }
+    .footer-top .subscribe h4 {
+      color: #fff;
+      text-transform: uppercase; }
+    .footer-top .subscribe .btn-subscribe {
+      width: 240px;
+      height: 60px;
+      border-radius: 2px;
+      background-color: #D8A949;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-radius: 0 2px 2px 0;
+      width: 150px; }
+      .footer-top .subscribe .btn-subscribe:hover {
+        background-color: rgba(219, 169, 73, 0.2);
+        color: #fff;
+        border: 2px solid #D8A949; }
+  .footer-top #emailAddress {
+    border: none;
+    border-radius: 2px 0 0 2px;
+    padding: 10px 10px 10px 20px; }
+
+footer {
+  background-color: #161B29;
+  height: 100px; }
+  footer .copyright {
+    color: #fff;
+    font-size: 14px; }
+  footer .legal-links {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0; }
+    footer .legal-links li {
+      display: inline; }
+      footer .legal-links li a {
+        color: #fff;
+        font-size: 14px;
+        padding: 0 10px; }
+        footer .legal-links li a:hover {
+          color: #D8A949;
+          text-decoration: none; }
+  footer .social {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0; }
+    footer .social li {
+      display: inline; }
+      footer .social li .fab {
+        color: #D8A949;
+        font-size: 20px;
+        padding: 0 13px; }
+        footer .social li .fab:hover {
+          color: #fff; }
+
+/*------ MEADIA QUERIES ------*/
+@media (max-width: 575.98px) {
+  .quicklinks {
+    display: none; }
+  footer {
+    height: auto;
+    padding: 20px 0;
+    text-align: center; }
+    footer .legal-links {
+      padding: 0;
+      margin-top: 15px; }
+      footer .legal-links li {
+        display: block; }
+    footer .social {
+      margin-bottom: 0;
+      padding: 0; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .quicklinks {
+    display: none; }
+  footer {
+    height: auto;
+    padding: 20px 0; }
+    footer .legal-links {
+      padding: 0; }
+      footer .legal-links li {
+        display: block; }
+        footer .legal-links li a {
+          text-align: left; }
+    footer .social {
+      margin-bottom: 0;
+      padding: 0; }
+      footer .social li .fab {
+        font-size: 18px; } }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .quicklinks {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .contact-numbers {
+    margin-bottom: 0; }
+  .footer-top {
+    height: 400px; }
+    .footer-top h4 {
+      color: #fff;
+      text-transform: uppercase; }
+    .footer-top .btn-subscribe {
+      width: 240px;
+      height: 60px;
+      border-radius: 2px;
+      background-color: #D8A949;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 150px; }
+      .footer-top .btn-subscribe:hover {
+        background-color: rgba(219, 169, 73, 0.2);
+        color: #fff;
+        border: 2px solid #D8A949; }
+    .footer-top .quicklinks {
+      list-style: none; }
+      .footer-top .quicklinks li {
+        display: inline; }
+        .footer-top .quicklinks li a {
+          color: #fff;
+          text-transform: uppercase;
+          padding: 0 20px;
+          font-size: 14px; }
+          .footer-top .quicklinks li a:hover {
+            color: #D8A949;
+            text-decoration: none; }
+  footer {
+    background-color: #161B29;
+    height: 100px; }
+    footer .copyright {
+      margin: 0; } }
