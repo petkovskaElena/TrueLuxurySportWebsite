@@ -49,8 +49,12 @@ p {
 section {
     padding: 50px 0 10px;
     @media(min-width: 992px) {
-        padding: 100px 0 20px;
+        padding: 100px 0 40px;
     }
+}
+
+.main-container {
+    width: 70% !important;
 }
 
 .hero {
@@ -75,6 +79,13 @@ section {
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+}
+
+.half-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 @media (min-width: 992px) {

@@ -49,7 +49,10 @@ section {
   padding: 50px 0 10px; }
   @media (min-width: 992px) {
     section {
-      padding: 100px 0 20px; } }
+      padding: 100px 0 40px; } }
+
+.main-container {
+  width: 70% !important; }
 
 .hero {
   color: #fff;
@@ -72,6 +75,12 @@ section {
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
+
+.half-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 @media (min-width: 992px) {
   h1 {
@@ -202,26 +211,12 @@ section {
     background: #D8A949;
     width: 200px; }
 
-.founders-info .item {
+.founders-info .frame {
   position: relative; }
-
-.founders-info #founderOne {
-  background: url("../images/founder1.jpg") no-repeat;
-  width: 100%;
-  height: 500px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.founders-info #founderTwo {
-  background: url("../images/founder2.jpg") no-repeat;
-  width: 100%;
-  height: 500px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  .founders-info .frame img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; }
 
 .founders-info h5 {
   color: #5D6161; }
@@ -250,7 +245,7 @@ section {
 
 /*------ BEST OF BRITAIN STYLING ------*/
 #bestOfBritain {
-  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/best_of_britain.jpg") no-repeat center center scroll; }
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-about.jpg") no-repeat center center scroll; }
 
 /*------ EVENTS ------*/
 .btn-more {
@@ -271,7 +266,8 @@ section {
 .event-item {
   position: relative;
   overflow: hidden;
-  color: #fff; }
+  color: #fff;
+  height: 360px; }
   .event-item .top-left {
     position: absolute;
     top: 10px;
@@ -282,8 +278,9 @@ section {
     .event-item .top-left i {
       color: #D8A949; }
   .event-item img {
+    position: absolute;
     width: 100%;
-    height: 360px;
+    height: 100%;
     object-fit: cover;
     -moz-transition: all 0.6s;
     -webkit-transition: all 0.6s;
