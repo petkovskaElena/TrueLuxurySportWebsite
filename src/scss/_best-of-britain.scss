@@ -1,7 +1,7 @@
 /*------ BEST OF BRITAIN STYLING ------*/
 
 #bestOfBritain {
-    background: linear-gradient(to bottom, rgba(28, 34, 48, 1) 0%, rgba(23, 30, 51, 0.36) 100%), url('../images/header-about.jpg') no-repeat center center scroll;
+    background: linear-gradient(to bottom, rgba(28, 34, 48, 1) 0%, rgba(23, 30, 51, 0.36) 100%), url('../images/royal-ascot.jpg') no-repeat center center scroll;
 }
 
 /*------ EVENTS ------*/
@@ -19,6 +19,7 @@
     overflow: hidden;
     color: $white; // height: 360px; //width: 360px;
     padding-bottom: 100%;
+    margin: 0 0 10px;
     .top-left {
         position: absolute;
         top: 10px;
@@ -50,7 +51,7 @@
         width: 100%;
         opacity: 0.3;
         transition: .5s ease;
-        background-color: rgba($background-dark, .8);
+        background-color: rgba($background-dark, .9);
     }
     figcaption {
         text-align: left;
@@ -60,7 +61,7 @@
             left: 0;
             padding: 20px;
             width: 100%;
-            height: 60%;
+            height: 65%;
         }
     }
     h2,
@@ -108,7 +109,7 @@
     }
 }
 
-/*------ EXPERIENCES ------*/
+/*------ EXPERIENCES CAROUSEL ------*/
 
 .experiences {
     .carousel {
@@ -144,6 +145,113 @@
             img {
                 width: 100%;
                 height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .experience-item {
+        position: relative;
+        overflow: hidden;
+        color: $white;
+        img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            -moz-transition: all 0.6s;
+            -webkit-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.3;
+            transition: .5s ease;
+            background-color: rgba($background-dark, .9);
+        }
+        figcaption {
+            text-align: center;
+            .caption {
+                position: absolute;
+                bottom: 10%;
+                left: 0;
+                padding: 20px;
+                width: 100%;
+                height: 50%;
+            }
+        }
+        h2,
+        .more-info {
+            -webkit-transform: translate3d(0, 160px, 0);
+            transform: translate3d(0, 160px, 0);
+        }
+        h2 {
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+        }
+        .more-info {
+            color: $white;
+            line-height: 1.6;
+            font-size: 16px;
+            opacity: 0;
+            -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+            transition: opacity 0.2s, transform 0.35s;
+        }
+        &:hover {
+            img {
+                -moz-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+            .overlay {
+                opacity: 1;
+            }
+            .more-info {
+                opacity: 1;
+            }
+            h2 {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            .more-info {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                -webkit-transition-delay: 0.05s;
+                transition-delay: 0.05s;
+                -webkit-transition-duration: 0.35s;
+                transition-duration: 0.35s;
+            }
+        }
+    }
+}
+
+/*------ EXPERIENCES RESPONSIVE CAROUSEL ------*/
+
+.experiences-responsive {
+    .carousel {
+        margin-bottom: 0;
+        .carousel-indicators {
+            bottom: -40px;
+            li {
+                width: 10px;
+                height: 8px;
+                background-color: rgba($grey, 0.2);
+            }
+            .active {
+                background-color: $accent;
+            }
+        }
+    }
+    .carousel-inner {
+        .carousel-item {
+            img {
+                width: 100%;
+                height: 550px;
                 object-fit: cover;
                 object-position: center;
             }
@@ -229,124 +337,6 @@
     }
 }
 
-/*------ EXPERIENCES RESPONSIVE ------*/
-
-// .experiences-responsive {
-//     .carousel {
-//         margin-bottom: 0;
-//         .indicator-left {
-//             i {
-//                 color: $background-dark;
-//                 font-size: 30px;
-//             }
-//         }
-//         .carousel-control-next {
-//             i {
-//                 color: $background-dark;
-//                 font-size: 30px;
-//             }
-//         }
-//         .carousel-indicators {
-//             bottom: -40px;
-//             li {
-//                 width: 15px;
-//                 height: 5px;
-//                 background-color: rgba($grey, 0.2);
-//             }
-//             .active {
-//                 background-color: $accent;
-//             }
-//         }
-//     }
-//     .carousel-inner {
-//         .carousel-item {
-//             img {
-//                 width: 100%;
-//                 height: 550px;
-//                 object-fit: cover;
-//                 object-position: center;
-//             }
-//         }
-//     }
-//     .experience-item {
-//         position: relative;
-//         overflow: hidden;
-//         color: $white;
-//         img {
-//             width: 100%;
-//             height: 550px;
-//             object-fit: cover;
-//             -moz-transition: all 0.6s;
-//             -webkit-transition: all 0.6s;
-//             transition: all 0.6s;
-//         }
-//         .overlay {
-//             position: absolute;
-//             top: 0;
-//             bottom: 0;
-//             left: 0;
-//             right: 0;
-//             height: 100%;
-//             width: 100%;
-//             opacity: 0.3;
-//             transition: .5s ease;
-//             background-color: rgba($background-dark, .8);
-//         }
-//         figcaption {
-//             text-align: center;
-//             .caption {
-//                 position: absolute;
-//                 bottom: 10%;
-//                 left: 0;
-//                 padding: 20px;
-//                 width: 100%;
-//                 height: 50%;
-//             }
-//         }
-//         h2,
-//         .more-info {
-//             -webkit-transform: translate3d(0, 160px, 0);
-//             transform: translate3d(0, 160px, 0);
-//         }
-//         h2 {
-//             -webkit-transition: -webkit-transform 0.35s;
-//             transition: transform 0.35s;
-//         }
-//         .more-info {
-//             color: $white;
-//             line-height: 1.6;
-//             font-size: 16px;
-//             opacity: 0;
-//             -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
-//             transition: opacity 0.2s, transform 0.35s;
-//         }
-//         &:hover {
-//             img {
-//                 -moz-transform: scale(1.2);
-//                 -webkit-transform: scale(1.2);
-//                 transform: scale(1.2);
-//             }
-//             .overlay {
-//                 opacity: 1;
-//             }
-//             .more-info {
-//                 opacity: 1;
-//             }
-//             h2 {
-//                 -webkit-transform: translate3d(0, 0, 0);
-//                 transform: translate3d(0, 0, 0);
-//             }
-//             .more-info {
-//                 -webkit-transform: translate3d(0, 0, 0);
-//                 transform: translate3d(0, 0, 0);
-//                 -webkit-transition-delay: 0.05s;
-//                 transition-delay: 0.05s;
-//                 -webkit-transition-duration: 0.35s;
-//                 transition-duration: 0.35s;
-//             }
-//         }
-//     }
-// }
 @media screen and (max-width: 480px) {
     .experiences {
         display: none !important;

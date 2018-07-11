@@ -9,6 +9,10 @@ $(document).ready(function () {
         }
     });
 
+    if ($("#mainMenu").offset().top > 100) {
+        $("#mainMenu").addClass("navbar-shrink");
+    }
+
     $('#btnToggle').on('click', function () {
         $("#mainMenu").toggleClass('navBackground');
     });

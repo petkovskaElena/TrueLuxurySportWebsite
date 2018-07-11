@@ -1,0 +1,8 @@
+.page-link {
+    border: none;
+    color: $accent;
+    &:hover {
+        color: $accent;
+        background-color: $primary;
+    }
+}

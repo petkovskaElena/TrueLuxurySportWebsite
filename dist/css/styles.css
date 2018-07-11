@@ -82,6 +82,9 @@ section {
   align-items: center;
   height: 100%; }
 
+.padding-5 {
+  padding: 0 5px !important; }
+
 @media (min-width: 992px) {
   h1 {
     font-size: 45px; }
@@ -227,7 +230,7 @@ section {
 
 /*------ BEST OF BRITAIN STYLING ------*/
 #bestOfBritain {
-  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-about.jpg") no-repeat center center scroll; }
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/royal-ascot.jpg") no-repeat center center scroll; }
 
 /*------ EVENTS ------*/
 .btn-more {
@@ -249,7 +252,8 @@ section {
   position: relative;
   overflow: hidden;
   color: #fff;
-  padding-bottom: 100%; }
+  padding-bottom: 100%;
+  margin: 0 0 10px; }
   .event-item .top-left {
     position: absolute;
     top: 10px;
@@ -277,7 +281,7 @@ section {
     width: 100%;
     opacity: 0.3;
     transition: .5s ease;
-    background-color: rgba(22, 27, 41, 0.8); }
+    background-color: rgba(8, 14, 32, 0.9); }
   .event-item figcaption {
     text-align: left; }
     .event-item figcaption .caption {
@@ -286,7 +290,7 @@ section {
       left: 0;
       padding: 20px;
       width: 100%;
-      height: 60%; }
+      height: 65%; }
   .event-item h2,
   .event-item .more-info {
     -webkit-transform: translate3d(0, 160px, 0);
@@ -321,18 +325,18 @@ section {
     -webkit-transition-duration: 0.35s;
     transition-duration: 0.35s; }
 
-/*------ EXPERIENCES ------*/
+/*------ EXPERIENCES CAROUSEL ------*/
 .experiences .carousel {
   margin-bottom: 0; }
   .experiences .carousel .carousel-control-prev {
     left: -10%; }
     .experiences .carousel .carousel-control-prev i {
-      color: #161B29;
+      color: #080E20;
       font-size: 30px; }
   .experiences .carousel .carousel-control-next {
     right: -10%; }
     .experiences .carousel .carousel-control-next i {
-      color: #161B29;
+      color: #080E20;
       font-size: 30px; }
   .experiences .carousel .carousel-indicators {
     bottom: -40px; }
@@ -370,7 +374,7 @@ section {
     width: 100%;
     opacity: 0.3;
     transition: .5s ease;
-    background-color: rgba(22, 27, 41, 0.8); }
+    background-color: rgba(8, 14, 32, 0.9); }
   .experiences .experience-item figcaption {
     text-align: center; }
     .experiences .experience-item figcaption .caption {
@@ -413,7 +417,88 @@ section {
     -webkit-transition-duration: 0.35s;
     transition-duration: 0.35s; }
 
-/*------ EXPERIENCES RESPONSIVE ------*/
+/*------ EXPERIENCES RESPONSIVE CAROUSEL ------*/
+.experiences-responsive .carousel {
+  margin-bottom: 0; }
+  .experiences-responsive .carousel .carousel-indicators {
+    bottom: -40px; }
+    .experiences-responsive .carousel .carousel-indicators li {
+      width: 10px;
+      height: 8px;
+      background-color: rgba(93, 97, 97, 0.2); }
+    .experiences-responsive .carousel .carousel-indicators .active {
+      background-color: #D8A949; }
+
+.experiences-responsive .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center; }
+
+.experiences-responsive .experience-item {
+  position: relative;
+  overflow: hidden;
+  color: #fff; }
+  .experiences-responsive .experience-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s; }
+  .experiences-responsive .experience-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s ease;
+    background-color: rgba(8, 14, 32, 0.8); }
+  .experiences-responsive .experience-item figcaption {
+    text-align: center; }
+    .experiences-responsive .experience-item figcaption .caption {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      height: 50%; }
+  .experiences-responsive .experience-item h2,
+  .experiences-responsive .experience-item .more-info {
+    -webkit-transform: translate3d(0, 160px, 0);
+    transform: translate3d(0, 160px, 0); }
+  .experiences-responsive .experience-item h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s; }
+  .experiences-responsive .experience-item .more-info {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s; }
+  .experiences-responsive .experience-item:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  .experiences-responsive .experience-item:hover .overlay {
+    opacity: 1; }
+  .experiences-responsive .experience-item:hover .more-info {
+    opacity: 1; }
+  .experiences-responsive .experience-item:hover h2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .experiences-responsive .experience-item:hover .more-info {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s; }
+
 @media screen and (max-width: 480px) {
   .experiences {
     display: none !important; } }
@@ -431,6 +516,13 @@ section {
     display: block !important; }
   .experiences-responsive {
     display: none; } }
+
+.page-link {
+  border: none;
+  color: #D8A949; }
+  .page-link:hover {
+    color: #D8A949;
+    background-color: #171E33; }
 
 /*------ NAVBAR STYLING ------*/
 #mainMenu {
@@ -459,11 +551,11 @@ section {
     background-color: transparent;
     font-weight: 600; }
   #mainMenu.navBackground {
-    background-color: rgba(22, 27, 41, 0.8); }
+    background-color: rgba(8, 14, 32, 0.8); }
   #mainMenu.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: rgba(22, 27, 41, 0.8); }
+    background-color: rgba(8, 14, 32, 0.8); }
     #mainMenu.navbar-shrink #logo {
       -moz-transform: scale(0.9);
       -webkit-transform: scale(0.9);
@@ -504,7 +596,7 @@ section {
       color: white;
       display: block;
       position: absolute;
-      top: 55px;
+      top: 45px;
       z-index: 3;
       text-align: left;
       right: 5%; }
@@ -539,7 +631,7 @@ section {
     #mainMenu.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: rgba(22, 27, 41, 0.8); }
+      background-color: rgba(8, 14, 32, 0.9); }
       #mainMenu.navbar-shrink #logo {
         -moz-transform: scale(0.9);
         -webkit-transform: scale(0.9);
@@ -599,7 +691,7 @@ section {
     padding: 10px 10px 10px 20px; }
 
 footer {
-  background-color: #161B29;
+  background-color: #080E20;
   height: 100px; }
   footer .copyright {
     color: #fff;
@@ -704,7 +796,7 @@ footer {
             color: #D8A949;
             text-decoration: none; }
   footer {
-    background-color: #161B29;
+    background-color: #080E20;
     height: 100px; }
     footer .copyright {
       margin: 0; } }
