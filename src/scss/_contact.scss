@@ -1,0 +1,70 @@
+.contact {
+    .contact-numbers {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    i {
+        color: $accent;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    #ukFlag,
+    #usFlag {
+        margin-right: 10px;
+    }
+}
+
+.brochures {
+    .brochure-item {
+        position: relative;
+        overflow: hidden;
+        color: $white;
+        height: 400px;
+        margin: 0 0 10px;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.3;
+            transition: .5s ease;
+            background-color: rgba($background-dark, .9);
+        }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            width: 100%;
+            height: 61%;
+            text-align: center;
+        }
+        .more-info {
+            color: $white;
+            line-height: 1.6;
+            font-size: 20px;
+            opacity: 0;
+        }
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+            .more-info {
+                opacity: 1;
+                color: $accent;
+            }
+        }
+    }
+}
