@@ -55,36 +55,13 @@
         }
     }
     #bestOfBritain {
-        background: url("../images/best_of_britain.jpg") no-repeat;
         width: 100%;
         height: 360px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        object-fit: cover;
     }
-    #concierge {
-        background: url("../images/concierge.jpg") no-repeat;
-        min-width: 360px;
-        width: 100%;
-        height: 360px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    #exclusiveAccess {
-        background: url("../images/exclusive_access.jpg") no-repeat;
-        min-width: 360px;
-        width: 100%;
-        height: 360px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+    #concierge,
+    #exclusiveAccess,
     #bestOfTheRest {
-        background: url("../images/best_of_the_rest.jpg") no-repeat;
         min-width: 360px;
         width: 100%;
         height: 360px;

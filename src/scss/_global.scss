@@ -54,7 +54,7 @@ section {
 }
 
 .main-container {
-    width: 70% !important;
+    width: 100% !important;
 }
 
 .hero {
@@ -104,4 +104,9 @@ section {
     h5 {
         font-size: 24px;
     }
+    .main-container {
+        width: 70% !important;
+    }
 }
+
+@media (min-width: 768px) {}
