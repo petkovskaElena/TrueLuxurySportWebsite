@@ -63,6 +63,12 @@ section {
     .hero {
       font-size: 60px; } }
 
+.divider {
+  border: 0;
+  height: 1px;
+  background: #D8A949;
+  width: 200px; }
+
 .headline {
   text-transform: uppercase; }
 
@@ -516,6 +522,9 @@ section {
     display: block !important; }
   .experiences-responsive {
     display: none; } }
+
+#conciergeHeader {
+  background: linear-gradient(to bottom, #1c2230 0%, rgba(23, 30, 51, 0.36) 100%), url("../images/header-concierge.jpg") no-repeat center center scroll; }
 
 .page-link {
   border: none;

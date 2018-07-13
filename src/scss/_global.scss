@@ -66,6 +66,13 @@ section {
     }
 }
 
+.divider {
+    border: 0;
+    height: 1px;
+    background: $accent;
+    width: 200px;
+}
+
 .headline {
     text-transform: uppercase;
 }
@@ -112,5 +119,3 @@ section {
         width: 70% !important;
     }
 }
-
-@media (min-width: 768px) {}
